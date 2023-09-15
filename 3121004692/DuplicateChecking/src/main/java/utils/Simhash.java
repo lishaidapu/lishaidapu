@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Simhash {
     public static String getSimHash(String date){
-        //用数组表示特征向量,取128位,从 0 1 2 位开始表示从高位到低位
+        //用数组表示特征向量,取128位,从0位开始表示从高位到低位
         int[] arr = new int[128];
         List<String> Ikstring = ikF.getString(date, false);
         int size = Ikstring.size();
@@ -48,7 +48,6 @@ public class Simhash {
         }
         return sb.toString();
     }
-
     public static String getHash(String str) {
         try {
             //使用MD5获得hash值

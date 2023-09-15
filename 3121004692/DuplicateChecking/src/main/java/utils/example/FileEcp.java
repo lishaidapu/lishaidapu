@@ -1,4 +1,4 @@
-package org.example;
+package utils.example;
 
 /**
  * Created with IntelliJ IDEA.

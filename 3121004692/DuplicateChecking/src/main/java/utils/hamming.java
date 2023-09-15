@@ -21,11 +21,11 @@ public class hamming {
         }
         return result;
     }
-
     public static double getSimilarity(String simHash1, String simHash2) {
         //通过 simHash1 和 simHash2 获得它们的海明距离
-        int distance = getHammingDis(simHash1, simHash2);
+        float distance = getHammingDis(simHash1, simHash2);
+        String  str = String.format("%.2f",distance);
         //通过海明距离计算出相似度，并返回
-        return 0.01 * (100 - distance * 100 / 128);
+        return  (100.0 - Double.parseDouble(str) * 100.0 / 128.0);
     }
 }

@@ -23,7 +23,7 @@ public class ikF {
             //创建分词对象 true则按照最大长度划分，false则划分出所有可以划分的词
             Analyzer anal = new IKAnalyzer(useSmart);
             StringReader reader = new StringReader(data);
-            //分词
+            //记录分词数据
             TokenStream ts = anal.tokenStream("", reader);
             CharTermAttribute term = ts.getAttribute(CharTermAttribute.class);
             //遍历分词数据

@@ -1,6 +1,6 @@
 package utils;
 
-import org.example.FileEcp;
+import utils.example.FileEcp;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,7 +13,7 @@ import java.nio.file.Paths;
  */
 public class Fileu {
     public static String readFile(String fileName){
-        //如果文件类型不是txt文件的话
+        //判断文件是否为txt
         if(!fileName.endsWith(".txt")){
             FileEcp.handle();
         }
@@ -29,14 +29,13 @@ public class Fileu {
             return s.toString();
         }
     }
-
     //写入txt文件
     public static void writeFile(String fileName,String data){
         //判断文件类型是否匹配
         if (!fileName.endsWith(".txt")){
             FileEcp.handle();
         }
-
+        //捕获返回异常
         try {
             File file=new File(fileName);
             file.createNewFile();
