@@ -8,7 +8,6 @@ import java.util.List;
  *
  * @Author: gpp
  * @Date: 2023/09/14/20:55
- * @Description:
  */
 public class Simhash {
     public static String getSimHash(String date){

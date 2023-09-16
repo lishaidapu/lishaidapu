@@ -9,7 +9,6 @@ import java.nio.file.Paths;
  *
  * @Author: gpp
  * @Date: 2023/09/14/19:55
- * @Description:
  */
 public class Fileu {
     public static String readFile(String fileName){
@@ -19,7 +18,7 @@ public class Fileu {
         }
         StringBuilder s=new StringBuilder();
         try(BufferedReader br= Files.newBufferedReader(Paths.get(fileName))) {
-            String line=null;
+            String line;
             while((line=br.readLine())!=null){
                 s.append(line);
             }
@@ -40,7 +39,7 @@ public class Fileu {
             File file=new File(fileName);
             file.createNewFile();
             try(FileWriter fileWriter=new FileWriter(file);
-                BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);){
+                BufferedWriter bufferedWriter=new BufferedWriter(fileWriter)){
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
             }

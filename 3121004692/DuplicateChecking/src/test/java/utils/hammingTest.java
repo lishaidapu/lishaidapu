@@ -7,11 +7,10 @@ import org.junit.Test;
  *
  * @Author: gpp
  * @Date: 2023/09/15/15:55
- * @Description:
  */
 public class hammingTest {
     @Test
-    public void testgetSimilarity(){
+    public void TestgetSimilarity(){
         String s1 = Fileu.readFile("F:\\JVAV\\DuplicateChecTxt\\orig.txt");
         String s2 = Fileu.readFile("F:\\JVAV\\DuplicateChecTxt\\orig_0.8_add.txt");
         String simHash1 = Simhash.getSimHash(s1);
@@ -22,9 +21,9 @@ public class hammingTest {
     }
 
     @Test
-    public void testgetHammingDis(){
+    public void TestgetHammingDis(){
         String s1 = Fileu.readFile("F:\\JVAV\\DuplicateChecTxt\\orig.txt");
-        String s2 = Fileu.readFile("F:\\JVAV\\DuplicateChecTxt\\orig_0.8_add.txt");
+        String s2 = Fileu.readFile("F:\\JVAV\\DuplicateChecTxt\\orig_0.8_del.txt");
         String simHash1 = Simhash.getSimHash(s1);
         String simHash2 = Simhash.getSimHash(s2);
         int hammingDis = hamming.getHammingDis(simHash1, simHash2);

@@ -7,7 +7,6 @@ import utils.hamming;
  *
  * @Author: gpp
  * @Date: 2023/09/14/20:55
- * @Description:
  */
 public class App 
 {
@@ -21,7 +20,7 @@ public class App
         //获取相似度
         double similarity = hamming.getSimilarity(simHash1, simHash2);
         //打印
-        String resultSimilarity = String.format("%.2f", similarity*100);
+        String resultSimilarity = String.format("%.2f", similarity);
         String result =  args[0] + "与" + args[1] + "的相似度为：" + resultSimilarity + "\r\n";
         //把相似度写入最后的结果文件中
         Fileu.writeFile(args[2],result);

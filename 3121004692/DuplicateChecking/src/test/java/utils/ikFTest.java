@@ -7,11 +7,10 @@ import java.util.List;
  *
  * @Author: gpp
  * @Date: 2023/09/15/15:55
- * @Description:
- */
+*/
 public class ikFTest {
     @Test
-    public void testIk(){
+    public void TestIk(){
         String data="原神，启动";
         List<String> string = ikF.getString(data, false);
         System.out.println(string.toString());
